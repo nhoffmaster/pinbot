@@ -1,0 +1,30 @@
+{
+  "name": "herokubottest",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "node .",
+    "start": "node ."
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "Nate Hoffmaster",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "discord.js-commando": "^0.10.0",
+    "dotenv": "^8.1.0",
+    "env": "0.0.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhoffmaster/freebot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nhoffmaster/freebot/issues"
+  },
+  "homepage": "https://github.com/nhoffmaster/freebot#readme"
+}

@@ -3,7 +3,7 @@ const bot = new Commando.Client({ partials: ['MESSAGE', 'CHANNEL'] });
 require('dotenv').config()
 
 bot.on("message", (message) => {
-	if(message.channel.id === "531575636532396043" && message.author.id != "585542675634192396"){
+	if(message.channel.name === "pinboard" && message.author.id != "585542675634192396"){
 		message.delete(1000);
 		message.author.send("You are not PinBot. You may not send messages in #pinboard.")
 	}

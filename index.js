@@ -21,8 +21,21 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 	}
 	// Now the message has been cached and is fully available
     if (reaction.emoji.name === '📌') {
-        var channel = bot.channels.get("531575636532396043");
-        channel.send("*\"" + reaction.message.content + "\"* - <@" + user.id + ">\nhttps://ptb.discordapp.com/channels/493512866452996146/" + reaction.message.channel.id + "/" + reaction.message.id);
+		var channel;
+		try{
+        	channel = reaction.message.guild.channels.find(channel => channel.name === "pinboard");
+		}
+		catch(e){
+			user.send("Pinboard channel does not exist, so it is impossible to send this message. To solve this, request that a moderator create a text channel called \"pinboard\".");
+			return;
+		}
+
+		if(!channel){
+			user.send("Pinboard channel does not exist, so it is impossible to send this message. To solve this, request that a moderator create a text channel called \"pinboard\".");
+			return;
+		}
+
+        channel.send("*\"" + reaction.message.content + "\"* - <@" + user.id + ">\nhttps://ptb.discordapp.com/channels/" + reaction.message.guild.id + "/" + reaction.message.channel.id + "/" + reaction.message.id);
     }
 });
 

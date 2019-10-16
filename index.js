@@ -64,7 +64,7 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 			return;
 		}
 
-        channel.send("*\"" + reaction.message.content + "\"* - <@" + message.author.id + ">\nhttps://ptb.discordapp.com/channels/" + reaction.message.guild.id + "/" + reaction.message.channel.id + "/" + reaction.message.id);
+        channel.send("*\"" + reaction.message.content + "\"* - <@" + reaction.message.author.id + ">\nhttps://ptb.discordapp.com/channels/" + reaction.message.guild.id + "/" + reaction.message.channel.id + "/" + reaction.message.id);
     }
 });
 

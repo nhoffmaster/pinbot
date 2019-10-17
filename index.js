@@ -64,7 +64,18 @@ bot.on('messageReactionAdd', async (reaction, user) => {
 			return;
 		}
 
-        channel.send("*\"" + reaction.message.content + "\"* - <@" + reaction.message.author.id + ">\nhttps://ptb.discordapp.com/channels/" + reaction.message.guild.id + "/" + reaction.message.channel.id + "/" + reaction.message.id);
+		channel.send({
+			embed: {
+				color: 9900000,
+				author: {
+					name: reaction.message.author.username,
+					icon_url: reaction.message.author.avatarURL
+				},
+				title: reaction.message.content,
+				description: "https://ptb.discordapp.com/channels/" + reaction.message.guild.id + "/" + reaction.message.channel.id + "/" + reaction.message.id,
+				timestamp: reaction.message.createdAt
+			}
+		});
     }
 });
 

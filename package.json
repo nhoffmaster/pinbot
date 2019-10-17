@@ -1,5 +1,5 @@
 {
-  "name": "herokubottest",
+  "name": "pinbot",
   "version": "1.0.0",
   "description": "test",
   "main": "index.js",
@@ -21,7 +21,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhoffmaster/freebot.git"
+    "url": "git+https://github.com/nhoffmaster/pinbot.git"
   },
   "bugs": {
     "url": "https://github.com/nhoffmaster/freebot/issues"

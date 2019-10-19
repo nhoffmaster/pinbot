@@ -13,16 +13,14 @@ bot.on("message", (message) => {
 });
 
 bot.on('messageReactionAdd', async (reaction, user) => {
-    // When we receive a reaction we check if the message is partial or not
+	console.log("reaction");
     if (reaction.message.partial) {
-        // If the message was removed the fetching might result in an API error, which we need to handle
         try {
             await reaction.message.fetch();
         } catch (error) {
             console.log('Something went wrong when fetching the message: ', error);
         }
     }
-    // Now the message has been cached and is fully available
     if ( reaction.emoji.name === process.env.REACT_EMOTE ) {
         let channel;
         try {

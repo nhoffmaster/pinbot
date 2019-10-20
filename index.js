@@ -8,7 +8,7 @@ require('dotenv').config();
 bot.on("message", (message) => {
     if(message.channel.name === process.env.CHANNEL_NAME && message.author.id != process.env.BOT_ID) {
         message.delete(1000);
-        message.author.send("You are not PinBot. You may not send messages in " + process.env.CHANNEL_NAME + ".");
+        message.author.send("You are not " + process.env.BOT_NAME + ". You may not send messages in " + process.env.CHANNEL_NAME + ".");
     }
 });
 
